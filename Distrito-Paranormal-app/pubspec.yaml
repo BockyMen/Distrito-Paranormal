@@ -17,3 +17,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/logo-distrito-paranormal.png"
+  image_pathadaptive_icon_foreground: "assets/icons/logo-distrito-paranormal.png"
+  adaptive_icon_background: "#4B0061"
+  adaptive_icon_foreground: "assets/icons/logo icono.png"
