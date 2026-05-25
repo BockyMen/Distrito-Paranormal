@@ -9,19 +9,39 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^8.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
 
 flutter:
   uses-material-design: true
 
-flutter_icons:
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_18pt-Regular.ttf
+        - asset: assets/fonts/Inter_18pt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter_18pt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter_18pt-Light.ttf
+          weight: 300
+
+flutter_launcher_icons:
   android: true
-  ios: false
+  ios: true
   image_path: "assets/icons/logo-distrito-paranormal.png"
-  image_pathadaptive_icon_foreground: "assets/icons/logo-distrito-paranormal.png"
   adaptive_icon_background: "#4B0061"
-  adaptive_icon_foreground: "assets/icons/logo icono.png"
+  adaptive_icon_foreground: "assets/icons/logo-icono.png"
+
+flutter_native_splash:
+  color: "#2F2F2F"
+  image: "assets/icons/logo-distrito-paranormal.png"
+  android_12:
+    image: "assets/icons/logo-distrito-paranormal.png"
+    color: "#2F2F2F"
