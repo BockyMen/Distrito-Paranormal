@@ -51,17 +51,19 @@ class Group40 extends StatelessWidget {
                                   SizedBox.expand(
                                     child: Container(
                                       height: double.infinity,
-                                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 20,
+                                      ),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.search, color: Color(0xFFCAC4D0), size: 20),
-                                          const SizedBox(width: 10), 
-                                          Text(
+                                          const Text(
                                             'Search here',
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                               color: Color(0xFFCAC4D0),
                                               fontSize: 16,
                                               fontFamily: 'Roboto',
@@ -75,48 +77,70 @@ class Group40 extends StatelessWidget {
                                     ),
                                   ),
                                   Positioned(
-                                    left: 330,
+                                    left: 334,
                                     top: 0,
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment: MainAxisAlignment.end,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         SizedBox(
-                                          width: 48,
-                                          height: 48,
+                                          width: 40,
+                                          height: 40,
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
                                             children: [
                                               Container(
                                                 width: 40,
                                                 clipBehavior: Clip.antiAlias,
                                                 decoration: ShapeDecoration(
                                                   shape: RoundedRectangleBorder(
-                                                    borderRadius: BorderRadius.circular(100),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          100,
+                                                        ),
                                                   ),
                                                 ),
                                                 child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
                                                   children: [
                                                     SizedBox(
                                                       width: double.infinity,
                                                       height: 40,
                                                       child: Row(
-                                                        mainAxisSize: MainAxisSize.min,
-                                                        mainAxisAlignment: MainAxisAlignment.center,
-                                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
                                                         children: [
                                                           Container(
                                                             width: 24,
                                                             height: 24,
-                                                            clipBehavior: Clip.antiAlias,
-                                                            decoration: const BoxDecoration(),
-                                                            child: const Stack(),
+                                                            clipBehavior:
+                                                                Clip.antiAlias,
+                                                            decoration:
+                                                                const BoxDecoration(),
+                                                            child: const Icon(
+                                                              Icons.search,
+                                                              color: Color(
+                                                                0xFFCAC4D0,
+                                                              ),
+                                                              size: 24,
+                                                            ),
                                                           ),
                                                         ],
                                                       ),

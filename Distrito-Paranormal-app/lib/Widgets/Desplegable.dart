@@ -10,13 +10,12 @@ class Lista extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          // Reducimos la altura fija restrictiva para que el contenido respire bien
           padding: const EdgeInsets.only(top: 24, bottom: 20),
           decoration: const ShapeDecoration(
             color: Color(0xFF252525),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30), // Bordes más redondeados como en tu Figma
+                topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
             ),
@@ -24,7 +23,7 @@ class Lista extends StatelessWidget {
               BoxShadow(
                 color: Color(0x3F000000),
                 blurRadius: 10,
-                offset: Offset(0, -4), // Sombra hacia arriba para efecto BottomSheet
+                offset: Offset(0, -4),
                 spreadRadius: 0,
               )
             ],
@@ -33,22 +32,18 @@ class Lista extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // --- TÍTULO ---
               const Text(
                 'Lugares populares',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20, // Un poco más grande para que resalte como en la muestra
+                  fontSize: 20,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.50,
                 ),
               ),
-              
-              const SizedBox(height: 24), // Espaciado controlado entre título y tarjetas
-
-              // --- CARRUSEL DE TARJETAS (REPARADO) ---
+              const SizedBox(height: 24),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -74,12 +69,11 @@ class Lista extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 24), // Espaciado controlado antes del botón
+              const SizedBox(height: 24),
 
-              // --- BOTÓN VER TODAS LAS TENDENCIAS ---
               Container(
                 width: 340,
-                height: 48, // Altura estándar de botón móvil estilizado
+                height: 48,
                 alignment: Alignment.center,
                 decoration: ShapeDecoration(
                   color: const Color(0xFF5D5D5D),
@@ -107,7 +101,6 @@ class Lista extends StatelessWidget {
   }
 }
 
-/// Componente de Tarjeta reparado con Stack interno para que el texto flote sobre la imagen
 class CardItem extends StatelessWidget {
   final String title;
   final String imageUrl;
@@ -133,18 +126,16 @@ class CardItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
         child: Stack(
           children: [
-            // 1. La imagen ocupa TODO el fondo de la tarjeta
             Positioned.fill(
               child: Image.network(
                 imageUrl,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
-                  return Container(color: Colors.grey[700]); // Fondo de respaldo si falla la URL
+                  return Container(color: Colors.grey[700]);
                 },
               ),
             ),
             
-            // 2. Degradado oscuro abajo para que las letras blancas se lean perfectamente
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(
@@ -153,15 +144,12 @@ class CardItem extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withOpacity(0.8),
                     ],
                     stops: const [0.6, 1.0],
                   ),
                 ),
               ),
             ),
-            
-            // 3. Textos e información (Abajo a la izquierda)
             Positioned(
               bottom: 16,
               left: 16,
@@ -193,7 +181,6 @@ class CardItem extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
-                      // Icono pequeño opcional de estrella
                       Icon(Icons.star, color: Colors.amber[400], size: 14),
                     ],
                   ),
