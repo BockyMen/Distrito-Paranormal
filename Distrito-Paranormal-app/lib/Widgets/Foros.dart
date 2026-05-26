@@ -43,7 +43,7 @@ class Foro extends StatelessWidget {
             
             // TARJETAS
             const ForoCard(
-              title: '¿El cementerio es...',
+              title: '¿El cementerio e...',
               author: 'By Bockymen',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779669490/Group_11_rnr7zv.png",
@@ -51,7 +51,7 @@ class Foro extends StatelessWidget {
             const SizedBox(height: 30),
             
             const ForoCard(
-              title: 'Titulo',
+              title: 'Hay algo extrañ... ',
               author: 'By J24',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779670644/Group_11_rko9tl.png",
@@ -59,35 +59,35 @@ class Foro extends StatelessWidget {
             const SizedBox(height: 30),
 
             const ForoCard(
-              title: 'Titulo',
+              title: 'Mi experiencia e...',
               author: 'By Axda',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779670643/Group_11_1_p9nypm.png",
             ),
             const SizedBox(height: 30),
             const ForoCard(
-              title: 'Titulo',
+              title: 'Mi top #3 mejor...',
               author: 'By JUB3',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779671602/Group_11_fvkvmc.png",
             ),
             const SizedBox(height: 30),
             const ForoCard(
-              title: 'Titulo',
+              title: 'Paranormal Bog...',
               author: 'By Indiivar',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779671601/Group_11_1_ka0okk.png",
             ),
             const SizedBox(height: 30),
             const ForoCard(
-              title: 'Titulo',
+              title: '¿Lugares embru...',
               author: 'By ZeroTwo',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779671601/Group_11_2_sxlfx4.png",
             ),
             const SizedBox(height: 30),
             const ForoCard(
-              title: 'Titulo',
+              title: '¿Qué incidentes...',
               author: 'By Bloxlink',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779671601/Rectangle_8_rmvrn9.png",
