@@ -3,11 +3,10 @@ import 'package:distrito_paranormal/Widgets/Eventos.dart';
 import 'package:distrito_paranormal/Widgets/Foros.dart';
 import 'package:distrito_paranormal/Widgets/Historias.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; 
-import './Widgets/BottomBar.dart'; 
-import './Widgets/Search.dart'; 
-import './Widgets/Desplegable.dart';
-import './Widgets/Cementeriocentral.dart';
+import 'package:flutter/services.dart';
+import './Widgets/BottomBar.dart';
+import './Widgets/Search.dart';
+import './Widgets/LugaresTendencia.dart';
 
 void main() {
   runApp(const MainApp());
@@ -83,6 +82,33 @@ class Image4 extends StatelessWidget {
         image: DecorationImage(
           image: NetworkImage("https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779640581/image_4_wgfybt.jpg"),
           fit: BoxFit.cover, 
+        ),
+      ),
+    );
+  }
+        home: Scaffold(
+          backgroundColor: const Color(0xFF141218),
+          extendBody: true,
+          body: Stack(
+            children: [
+              // Widget principal ocupa toda la pantalla
+              const Positioned.fill(
+                child: LugaresEnTendencia(),
+              ),
+
+              // Barra de búsqueda flotante encima
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: SafeArea(
+                  bottom: false,
+                  child: Group40(),
+                ),
+              ),
+            ],
+          ),
+          bottomNavigationBar: const NavigationBarVerticalItems(),
         ),
       ),
     );
