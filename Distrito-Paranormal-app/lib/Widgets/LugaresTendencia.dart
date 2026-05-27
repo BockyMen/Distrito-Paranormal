@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:distrito_paranormal/Widgets/Search.dart';
 
 class LugaresEnTendencia extends StatelessWidget {
   const LugaresEnTendencia({super.key});
@@ -148,6 +149,15 @@ class LugaresEnTendencia extends StatelessWidget {
               ),
             ),
           ),
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: SafeArea(
+                bottom: false,
+                child: Group40(),
+      ),
+      ),
         ],
       ),
     );

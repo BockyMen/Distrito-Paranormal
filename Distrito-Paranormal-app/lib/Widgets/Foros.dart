@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './Foros1.dart';
+import './Foros2.dart';
+import './Foros3.dart';
 
 class Foro extends StatelessWidget {
   const Foro({super.key});
@@ -41,29 +44,50 @@ class Foro extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             
-            // TARJETAS
-            const ForoCard(
-              title: '¿El cementerio e...',
-              author: 'By Bockymen',
-              comments: '5 Comments',
-              imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779669490/Group_11_rnr7zv.png",
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Foro1()),
+                );
+              },
+              child: const ForoCard(
+                title: '¿El cementerio e...',
+                author: 'By Bockymen',
+                comments: '5 Comments',
+                imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779669490/Group_11_rnr7zv.png",
+              ),
             ),
             const SizedBox(height: 30),
             
-            const ForoCard(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Foro2()),
+                );
+              },            
+            child: const ForoCard(
               title: 'Hay algo extrañ... ',
               author: 'By J24',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779670644/Group_11_rko9tl.png",
-            ),
+            ),),
             const SizedBox(height: 30),
 
-            const ForoCard(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Foro3()),
+                );
+              },
+             child: const ForoCard(
               title: 'Mi experiencia e...',
               author: 'By Axda',
               comments: '5 Comments',
               imageUrl: "https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779670643/Group_11_1_p9nypm.png",
-            ),
+            ),),
             const SizedBox(height: 30),
             const ForoCard(
               title: 'Mi top #3 mejor...',

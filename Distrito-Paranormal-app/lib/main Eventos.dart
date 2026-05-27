@@ -34,7 +34,9 @@ class PantallaPrincipal extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF2F2F2F),
       body: const Eventos(),
-      bottomNavigationBar: const NavigationBarVerticalItems(),
+      bottomNavigationBar: NavigationBarVerticalItems(
+        onItemSelected: (index) {},
+      ),
     );
   }
 }
