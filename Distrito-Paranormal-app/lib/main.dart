@@ -5,7 +5,6 @@ import 'package:distrito_paranormal/Widgets/Historias.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './Widgets/BottomBar.dart';
-import './Widgets/Search.dart';
 import './Widgets/LugaresTendencia.dart';
 
 void main() {
@@ -40,23 +39,25 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  
-  final List<Widget> _pages =[
-    const Cementeriocentral(),
-    const HistoriasPopulares(),
-    const Foro(),
-    const Eventos(),
-    const BitCora(),
+
+  final List<Widget> _pages = [
+    const LugaresEnTendencia(),  // 0
+    const HistoriasPopulares(),  // 1
+    const Foro(),                // 2
+    const Eventos(),             // 3
+    const BitCora(),             // 4
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF141218),
+      extendBody: true,
       body: Stack(
         children: [
           const Positioned.fill(child: Image4()),
-          Positioned.fill(child: _pages[_selectedIndex]),
+          if (_selectedIndex >= 0)
+            Positioned.fill(child: _pages[_selectedIndex]),
         ],
       ),
       bottomNavigationBar: NavigationBarVerticalItems(
@@ -81,34 +82,7 @@ class Image4 extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage("https://res.cloudinary.com/dcuytactz/image/upload/q_auto/f_auto/v1779640581/image_4_wgfybt.jpg"),
-          fit: BoxFit.cover, 
-        ),
-      ),
-    );
-  }
-        home: Scaffold(
-          backgroundColor: const Color(0xFF141218),
-          extendBody: true,
-          body: Stack(
-            children: [
-              // Widget principal ocupa toda la pantalla
-              const Positioned.fill(
-                child: LugaresEnTendencia(),
-              ),
-
-              // Barra de búsqueda flotante encima
-              Positioned(
-                top: 0,
-                left: 0,
-                right: 0,
-                child: SafeArea(
-                  bottom: false,
-                  child: Group40(),
-                ),
-              ),
-            ],
-          ),
-          bottomNavigationBar: const NavigationBarVerticalItems(),
+          fit: BoxFit.cover,
         ),
       ),
     );

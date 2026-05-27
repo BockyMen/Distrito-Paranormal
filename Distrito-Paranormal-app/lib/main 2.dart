@@ -53,9 +53,11 @@ class MainApp extends StatelessWidget {
               ),
             ],
           ),
-          bottomNavigationBar: const NavigationBarVerticalItems(),
+        bottomNavigationBar: NavigationBarVerticalItems(
+          onItemSelected: (index) {},
         ),
       ),
+    )
     );
   }
 }
