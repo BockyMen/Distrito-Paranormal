@@ -96,7 +96,7 @@ class Foro2 extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     const Text(
-                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                      'J24 siempre evitaba mirar directamente a la entrada de la universidad después de las seis de la tarde. El letrero que colgaba sobre los pilares parecía distorsionarse bajo la luz de los postes, cambiando las letras que formaban el nombre de la institución. Algunos decían que era un fallo en la realidad, otros que era una broma pesada de los estudiantes de artes, pero J24 sabía la verdad. Cada vez que alguien se sentaba en los bancos de abajo, el reflejo en las ventanas no mostraba a los estudiantes, sino a figuras que caminaban en una dirección distinta a la suya, como si existiera un campus paralelo esperando ser descubierto.',
                       style: TextStyle(
                         color: Color(0xFFDCDCDC),
                         fontSize: 14,

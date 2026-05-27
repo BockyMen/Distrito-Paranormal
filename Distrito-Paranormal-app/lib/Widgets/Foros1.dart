@@ -96,7 +96,7 @@ class Foro1 extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     const Text(
-                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                      'El aire en el cementerio siempre era pesado, cargado con el aroma de la tierra húmeda tras la lluvia. Bockymen caminaba por el pasillo central, observando cómo las sombras de los árboles se alargaban sobre las lápidas antiguas. Para la mayoría, era un lugar de duelo, pero para él, era un libro abierto. Cada nombre grabado en la piedra contaba una historia, un secreto que el tiempo intentaba borrar. Esa tarde, mientras fotografiaba las rejas oxidadas, sintió que no estaba solo; no era miedo, sino la sensación de que, finalmente, alguien o algo estaba escuchando sus preguntas sobre lo que sucede después.',
                       style: TextStyle(
                         color: Color(0xFFDCDCDC),
                         fontSize: 14,
