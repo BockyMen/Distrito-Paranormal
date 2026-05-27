@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './Widgets/BottomBar.dart';
 import './Widgets/Search.dart';
-import './Widgets/LugaresTendencia.dart';
+import './Widgets/LugaresTendencia2.dart';
 
 void main() {
   runApp(const MainApp());
@@ -26,9 +26,19 @@ class MainApp extends StatelessWidget {
           extendBody: true,
           body: Stack(
             children: [
-              // Widget principal ocupa toda la pantalla
-              const Positioned.fill(
-                child: LugaresEnTendencia(),
+              // Widget principal con scroll para las dimensiones fijas 440x959
+              Positioned.fill(
+                child: SingleChildScrollView(
+                  physics: const ClampingScrollPhysics(),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      alignment: Alignment.topCenter,
+                      child: const LugaresEnTendencia2(),
+                    ),
+                  ),
+                ),
               ),
 
               // Barra de búsqueda flotante encima
