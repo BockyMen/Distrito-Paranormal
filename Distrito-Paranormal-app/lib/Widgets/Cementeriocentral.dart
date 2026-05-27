@@ -5,12 +5,11 @@ class Cementeriocentral extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: double.infinity, 
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
           decoration: const ShapeDecoration(
             color: Color(0xFF252525),
             shape: RoundedRectangleBorder(
@@ -29,6 +28,7 @@ class Cementeriocentral extends StatelessWidget {
             ],
           ),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
@@ -246,7 +246,6 @@ class Cementeriocentral extends StatelessWidget {
             ],
           ),
         ),
-      ],
     );
   }
 }

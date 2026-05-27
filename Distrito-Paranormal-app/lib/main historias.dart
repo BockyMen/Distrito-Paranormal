@@ -23,7 +23,9 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
           backgroundColor: const Color(0xFF141218),
           body: const HistoriasPopulares(),
-          bottomNavigationBar: const NavigationBarVerticalItems(),
+          bottomNavigationBar: NavigationBarVerticalItems(
+            onItemSelected: (index) {},
+          ),
         ),
       ),
     );

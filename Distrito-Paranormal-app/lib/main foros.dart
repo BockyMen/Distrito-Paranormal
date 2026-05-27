@@ -22,7 +22,9 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: const Foro(),
-          bottomNavigationBar: const NavigationBarVerticalItems(),
+          bottomNavigationBar: NavigationBarVerticalItems(
+            onItemSelected: (index) {},
+          ),
         ),
       ),
     );

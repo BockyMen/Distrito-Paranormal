@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NavigationBarVerticalItems extends StatefulWidget {
-  const NavigationBarVerticalItems({super.key});
+  final ValueChanged<int> onItemSelected;
+  const NavigationBarVerticalItems({super.key, required this.onItemSelected});
 
   @override
   State<NavigationBarVerticalItems> createState() => _NavigationBarVerticalItemsState();
@@ -9,6 +10,11 @@ class NavigationBarVerticalItems extends StatefulWidget {
 
 class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems> {
   int _selectedIndex = 0;
+
+  void _onTap(int index) {
+    setState(() => _selectedIndex = index);
+    widget.onItemSelected(index);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +44,7 @@ class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems>
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => setState(() => _selectedIndex = 0),
+                          onTap: () => _onTap(0),
                           child: Container(
                             height: double.infinity,
                             padding: const EdgeInsets.symmetric(vertical: 6),
@@ -84,7 +90,7 @@ class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems>
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => setState(() => _selectedIndex = 1),
+                          onTap: () => _onTap(1),
                           child: Container(
                             height: double.infinity,
                             padding: const EdgeInsets.symmetric(vertical: 6),
@@ -130,7 +136,7 @@ class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems>
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => setState(() => _selectedIndex = 2),
+                          onTap: () => _onTap(2),
                           child: Container(
                             height: double.infinity,
                             padding: const EdgeInsets.symmetric(vertical: 6),
@@ -176,7 +182,7 @@ class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems>
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => setState(() => _selectedIndex = 3),
+                          onTap: () => _onTap(3),
                           child: Container(
                             height: double.infinity,
                             padding: const EdgeInsets.symmetric(vertical: 6),
@@ -222,7 +228,7 @@ class _NavigationBarVerticalItemsState extends State<NavigationBarVerticalItems>
                       Expanded(
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => setState(() => _selectedIndex = 4),
+                          onTap: () => _onTap(4),
                           child: Container(
                             height: double.infinity,
                             padding: const EdgeInsets.symmetric(vertical: 6),

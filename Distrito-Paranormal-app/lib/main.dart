@@ -1,3 +1,7 @@
+import 'package:distrito_paranormal/Widgets/Bitacora.dart';
+import 'package:distrito_paranormal/Widgets/Eventos.dart';
+import 'package:distrito_paranormal/Widgets/Foros.dart';
+import 'package:distrito_paranormal/Widgets/Historias.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; 
 import './Widgets/BottomBar.dart'; 
@@ -14,8 +18,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const bool mostrarListaTendencias = false; 
-
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -24,36 +26,51 @@ class MainApp extends StatelessWidget {
       ),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          backgroundColor: const Color(0xFF141218),
-          body: Stack(
-            children: [
-              const Positioned.fill(
-                child: Image4(),
-              ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: mostrarListaTendencias ? const Lista() : const Cementeriocentral(),
-              ),
-              Positioned(
-                top: 0,
-                left: 0,
-                right: 0,
-                child: SafeArea(
-                  bottom: false,
-                  child: Group40(),
-                ),
-              ),
-            ],
-          ),
-          bottomNavigationBar: const NavigationBarVerticalItems(),
-        ),
+        home: const HomeScreen(),
       ),
     );
   }
 }
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+  
+  final List<Widget> _pages =[
+    const Cementeriocentral(),
+    const HistoriasPopulares(),
+    const Foro(),
+    const Eventos(),
+    const BitCora(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF141218),
+      body: Stack(
+        children: [
+          const Positioned.fill(child: Image4()),
+          Positioned.fill(child: _pages[_selectedIndex]),
+        ],
+      ),
+      bottomNavigationBar: NavigationBarVerticalItems(
+        onItemSelected: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),
+    );
+  }
+}
+
 class Image4 extends StatelessWidget {
   const Image4({super.key});
 
