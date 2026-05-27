@@ -112,6 +112,7 @@ class Foro3 extends StatelessWidget {
                         size: 48,
                       ),
                       onPressed: () {
+                        Navigator.pop(context);
                       },
                     ),
                   ],
